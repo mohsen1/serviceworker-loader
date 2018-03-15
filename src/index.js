@@ -29,7 +29,7 @@ function pitch(request) {
 	const cb = this.async();
 
 	const filename = loaderUtils.interpolateName(this, options.filename || '[name].js', {
-		context: options.context || this.rootContext || this.options.context,
+		context: options.context || this.rootContext || this.query.context || this.options.context,
 		regExp:  options.regExp
 	});
 
@@ -41,11 +41,13 @@ function pitch(request) {
 		namedChunkFilename: null
 	};
 
+	const query = this.query || this.options;
+
 	// TODO remove and triage eventual replacement via an option if needed
 	// doesn't work with webpack > v2.0.0
-	if (this.options && this.options.worker && this.options.worker.output) {
-		Object.keys(this.options.worker.output).forEach((name) => {
-			outputOptions[name] = this.options.worker.output[name];
+	if (query && query.worker && query.worker.output) {
+		Object.keys(query.worker.output).forEach((name) => {
+			outputOptions[name] = query.worker.output[name];
 		});
 	}
 
@@ -56,8 +58,8 @@ function pitch(request) {
 
 	// TODO remove and triage eventual replacement via an option if needed
 	// doesn't work with webpack > v2.0.0
-	if (this.options && this.options.worker && this.options.worker.plugins) {
-		this.options.worker.plugins.forEach(plugin =>
+	if (query && query.worker && query.worker.plugins) {
+		query.worker.plugins.forEach(plugin =>
 			compiler.apply(plugin)
 		);
 	}
