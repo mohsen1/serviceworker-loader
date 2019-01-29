@@ -1,5 +1,7 @@
 # service-worker-loader
 
+[![Build Status](https://travis-ci.org/mohsen1/service-worker-loader.svg?branch=master)](https://travis-ci.org/mohsen1/service-worker-loader)
+
 [![NPM version][npm]][npm-url]
 [![Node version][node]][node-url]
 [![Peer dependency status][peer-deps]][peer-deps-url]
