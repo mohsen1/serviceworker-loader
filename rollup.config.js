@@ -18,7 +18,7 @@ const plugins = [
 	})
 ];
 const dependencies = [].concat(
-	['path'],
+	['path', 'util'],
 	Object.keys(pkg.dependencies),
 	Object.keys(pkg.peerDependencies)
 );
