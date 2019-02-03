@@ -1,11 +1,10 @@
 # service-worker-loader
 
-[![Build Status](https://travis-ci.org/mohsen1/service-worker-loader.svg?branch=master)](https://travis-ci.org/mohsen1/service-worker-loader)
-
 [![NPM version][npm]][npm-url]
 [![Node version][node]][node-url]
 [![Peer dependency status][peer-deps]][peer-deps-url]
 [![Dependency status][deps]][deps-url]
+[![Build status][build]][build-url]
 
 [npm]: https://img.shields.io/npm/v/service-worker-loader.svg
 [npm-url]: https://www.npmjs.com/package/service-worker-loader
@@ -18,6 +17,9 @@
 
 [deps]: https://img.shields.io/david/mohsen1/service-worker-loader.svg
 [deps-url]: https://david-dm.org/mohsen1/service-worker-loader
+
+[build]: http://img.shields.io/travis/mohsen1/service-worker-loader.svg
+[build-url]: https://travis-ci.org/mohsen1/service-worker-loader
 
 Modern ServiceWorker loader for [Webpack](https://webpack.js.org).
 
@@ -32,17 +34,19 @@ yarn add -D service-worker-loader
 ## [Usage](https://webpack.js.org/concepts/loaders)
 
 ```js
-import registerServiceWorker, { ServiceWorkerNoSupportError } from 'service-worker-loader!./sw';
+import registerServiceWorker, {
+    ServiceWorkerNoSupportError
+} from 'service-worker-loader!./sw';
 
 registerServiceWorker({ scope: '/' }).then(() => {
-	console.log('Success!');
+    console.log('Success!');
 }).catch((err) => {
-	
-	if (err instanceof ServiceWorkerNoSupportError) {
-		console.log('ServiceWorker is not supported.');
-	} else {
-		console.log('Error!');
-	}
+
+    if (err instanceof ServiceWorkerNoSupportError) {
+        console.log('ServiceWorker is not supported.');
+    } else {
+        console.log('Error!');
+    }
 });
 ```
 

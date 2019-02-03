@@ -41,3 +41,7 @@ node_modules
 
 # Compiled dist
 lib
+
+# Test artifacts
+test/artifacts/*
+

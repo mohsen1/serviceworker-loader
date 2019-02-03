@@ -1,8 +1,6 @@
 
 export default function serviceWorker(publicPath, file) {
-	return `
-
-export class ServiceWorkerNoSupportError extends Error {
+	return `export class ServiceWorkerNoSupportError extends Error {
 
 	constructor() {
 		super('ServiceWorker is not supperted.');
@@ -17,6 +15,5 @@ export default function registerServiceWorkerIfSupported(options) {
 
 	return Promise.reject(new ServiceWorkerNoSupportError());
 }
-
 `;
 }

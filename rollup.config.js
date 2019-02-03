@@ -1,8 +1,7 @@
 import commonjs from 'rollup-plugin-commonjs';
-import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import json from 'rollup-plugin-json';
-import eslint from 'rollup-plugin-eslint';
+import { eslint } from 'rollup-plugin-eslint';
 import pkg from './package.json';
 
 const plugins = [
@@ -13,27 +12,13 @@ const plugins = [
 	json({
 		preferConst: true
 	}),
-	babel(Object.assign({
-		babelrc: false,
-		exclude: 'node_modules/**'
-	}, pkg.babel, {
-		presets: pkg.babel.presets.map((preset) => {
-
-			if (Array.isArray(preset) && preset[0] == 'env') {
-				preset[1].modules = false;
-			}
-
-			return preset
-		})
-	})),
-	resolve({
-		preferBuiltins: true
-	}),
-	commonjs()
+	commonjs(),
+	babel({
+		runtimeHelpers: true
+	})
 ];
-
 const dependencies = [].concat(
-	['path'],
+	['path', 'util'],
 	Object.keys(pkg.dependencies),
 	Object.keys(pkg.peerDependencies)
 );
@@ -54,6 +39,7 @@ export default {
 	output: {
 		file:      pkg.main,
 		format:    'cjs',
-		sourcemap: true
+		exports:   'named',
+		sourcemap: 'inline'
 	}
 };
