@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`service-worker-loader should emit bundle and service worker 1`] = `
+"export class ServiceWorkerNoSupportError extends Error {
+
+	constructor() {
+		super('ServiceWorker is not supperted.');
+	}
+}
+
+export default function registerServiceWorkerIfSupported(options) {
+
+	if ('serviceWorker' in navigator) {
+		return navigator.serviceWorker.register(\\"/\\" + \\"serviceWorker.js\\", options);
+	}
+
+	return Promise.reject(new ServiceWorkerNoSupportError());
+}
+"
+`;
+
+exports[`service-worker-loader should emit bundle and service worker 2`] = `
+"/* eslint-env serviceworker */
+/* eslint-disable import/unambiguous */
+
+self.addEventListener('install', () => {
+	postMessageToAll({
+		action: 'install'
+	});
+});
+
+self.addEventListener('activate', () => {
+	postMessageToAll({
+		action: 'activate'
+	});
+});
+
+self.addEventListener('fetch', (event) => {
+	postMessageToAll({
+		action:  'fetch',
+		payload: event.request.url
+	});
+});
+
+async function postMessageToAll(message) {
+
+	const clients = await self.clients.matchAll();
+
+	return Promise.all(
+		clients.map(client => client.postMessage(message))
+	);
+}
+"
+`;
