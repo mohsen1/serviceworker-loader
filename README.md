@@ -38,8 +38,9 @@ import registerServiceWorker, {
     ServiceWorkerNoSupportError
 } from 'service-worker-loader!./sw';
 
-registerServiceWorker({ scope: '/' }).then(() => {
+registerServiceWorker({ scope: '/' }).then((registration) => {
     console.log('Success!');
+    console.log(registration);
 }).catch((err) => {
 
     if (err instanceof ServiceWorkerNoSupportError) {
