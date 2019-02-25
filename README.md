@@ -54,7 +54,7 @@ registerServiceWorker({ scope: '/' }).then((registration) => {
 ### Options
 
 #### `filename`
-Defaults to `"[name].js"`. Specify the file name for generated Service Worker file
+Defaults to `"[name].js"`. Specify the file name for generated ServiceWorker file
 
 #### `publicPath`
 Defaults to `"/"`. Overrides default `publicPath`. 

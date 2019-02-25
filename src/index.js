@@ -4,10 +4,17 @@ import loaderUtils from 'loader-utils';
 import validateOptions from 'schema-utils';
 import SingleEntryPlugin from 'webpack/lib/SingleEntryPlugin';
 import WebWorkerTemplatePlugin from 'webpack/lib/webworker/WebWorkerTemplatePlugin';
-import { onCompilerHook } from './utils';
+import {
+	identifier,
+	onCompilerHook
+} from './utils';
 import getServiceWorker from './serviceWorker';
 import LoaderError from './LoaderError';
 import schema from './options.json';
+
+export {
+	identifier
+};
 
 export default function loader() {
 }
@@ -38,7 +45,7 @@ export function pitch(request) {
 		chunkFilename:      `[id].${filename}`,
 		namedChunkFilename: null
 	};
-	const compiler = this._compilation.createChildCompiler('service-worker', outputOptions);
+	const compiler = this._compilation.createChildCompiler(identifier, outputOptions);
 
 	// Tapable.apply is deprecated in tapable@1.0.0-x.
 	// The plugins should now call apply themselves.

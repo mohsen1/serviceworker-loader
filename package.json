@@ -1,6 +1,6 @@
 {
   "name": "service-worker-loader",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Modern ServiceWorker loader for Webpack.",
   "authors": [
     {
@@ -33,7 +33,7 @@
     "jest": "NODE_ENV=test jest -c jest.config.json",
     "checkSize": "size-limit",
     "test": "npm run lint && npm run jest && npm run build && npm run checkSize",
-    "buildTestBundle": "NODE_ENV=test babel-node test/buildTestBundle",
+    "build:testBundle": "NODE_ENV=test babel-node test/buildTestBundle",
     "build": "rollup -c",
     "watch": "rollup -c -w",
     "cleanPublish": "npm run test && clean-publish"

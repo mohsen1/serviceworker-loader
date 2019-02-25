@@ -1,7 +1,6 @@
+import { name } from '../package.json';
 
-const plugin = {
-	name: 'ServiceWorkerLoader'
-};
+export const identifier = name;
 
 export function onCompilerHook(compiler, hook, handler, isAsync) {
 
@@ -10,9 +9,9 @@ export function onCompilerHook(compiler, hook, handler, isAsync) {
 		const compilerHook = compiler.hooks[hook];
 
 		if (isAsync) {
-			compilerHook.tapPromise(plugin, handler);
+			compilerHook.tapPromise(identifier, handler);
 		} else {
-			compilerHook.tap(plugin, handler);
+			compilerHook.tap(identifier, handler);
 		}
 
 	} else {
