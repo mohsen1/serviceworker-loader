@@ -3,7 +3,7 @@ export default function serviceWorker(publicPath, file) {
 	return `export class ServiceWorkerNoSupportError extends Error {
 
 	constructor() {
-		super('ServiceWorker is not supperted.');
+		super('ServiceWorker is not supported.');
 	}
 }
 

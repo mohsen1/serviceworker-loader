@@ -4,7 +4,7 @@ exports[`service-worker-loader should emit bundle and service worker 1`] = `
 "export class ServiceWorkerNoSupportError extends Error {
 
 	constructor() {
-		super('ServiceWorker is not supperted.');
+		super('ServiceWorker is not supported.');
 	}
 }
 
