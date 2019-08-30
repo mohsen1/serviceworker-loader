@@ -85,6 +85,10 @@ export function pitch(request) {
 				JSON.stringify(file)
 			);
 
+			if (!file) {
+				return cb(new Error('No file.'));
+			}
+
 			if (options.outputPath) {
 				onCompilerHook(rootCompiler, 'afterEmit', (compilation) => {
 

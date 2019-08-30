@@ -26,17 +26,17 @@
   },
   "main": "lib/index.js",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.0.0"
   },
   "scripts": {
-    "lint": "eslint --cache 'src/**/*.js'",
-    "jest": "NODE_ENV=test jest -c jest.config.json",
-    "checkSize": "size-limit",
-    "test": "npm run lint && npm run jest && npm run build && npm run checkSize",
+    "lint": "trigen-scripts lint",
+    "jest": "trigen-scripts jest",
+    "checkSize": "trigen-scripts checkSize",
+    "test": "trigen-scripts test",
+    "start": "trigen-scripts start",
     "build:testBundle": "NODE_ENV=test babel-node test/buildTestBundle",
-    "build": "rollup -c",
-    "watch": "rollup -c -w",
-    "cleanPublish": "npm run test && clean-publish"
+    "build": "trigen-scripts build",
+    "cleanPublish": "trigen-scripts cleanPublish"
   },
   "keywords": [
     "serviceworker",
@@ -47,30 +47,24 @@
     "webpack": "^3.0.0 || ^4.0.0"
   },
   "dependencies": {
+    "@babel/runtime": "^7.5.5",
+    "core-js": "3",
     "loader-utils": "^1.2.3",
     "schema-utils": "^1.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/node": "^7.2.2",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^24.0.0",
-    "babel-preset-trigen": "^1.8.0",
-    "browserslist-config-trigen": "^1.1.0",
-    "clean-publish": "^1.1.0",
-    "eslint": "^5.13.0",
-    "eslint-config-trigen": "^3.2.1",
+    "@size-limit/preset-small-lib": "^2.1.1",
+    "@trigen/scripts": "2",
+    "@trigen/scripts-plugin-babel": "2",
+    "@trigen/scripts-plugin-eslint": "2",
+    "@trigen/scripts-plugin-jest": "2",
+    "@trigen/scripts-plugin-rollup": "2",
+    "@trigen/scripts-plugin-size-limit": "2",
+    "@trigen/scripts-preset-lib": "2",
     "eslint-plugin-jest": "^22.2.2",
-    "husky": "^1.3.1",
-    "jest": "^24.0.0",
-    "lint-staged": "^8.1.3",
     "memory-fs": "^0.4.1",
-    "rollup": "^1.1.2",
-    "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-eslint": "^5.0.0",
     "rollup-plugin-json": "^3.1.0",
-    "size-limit": "^0.21.1",
     "webpack": "^4.29.0"
   },
   "files": [
