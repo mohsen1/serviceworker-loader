@@ -1,10 +1,20 @@
 import path from 'path';
+import webpack from 'webpack';
+import rimraf from 'rimraf';
 import compile, {
 	fs,
 	pathToArtifacts
 } from './compile';
 
 describe('service-worker-loader', () => {
+
+	beforeEach((done) => {
+		rimraf(
+			path.join(pathToArtifacts, '**', '*'),
+			fs,
+			done
+		);
+	});
 
 	it('should emit bundle and service worker', async () => {
 
@@ -38,6 +48,24 @@ describe('service-worker-loader', () => {
 		expect(
 			fs.statSync(
 				path.join(outputPath, 'serviceWorker.js')
+			).isFile()
+		).toBe(true);
+	});
+
+	it('should work with `HotModuleReplacementPlugin`', async () => {
+
+		const stats = await compile('serviceWorkerLoader.js', {
+			devMode: true,
+			plugins: [
+				new webpack.HotModuleReplacementPlugin()
+			]
+		});
+
+		console.log(stats);
+
+		expect(
+			fs.statSync(
+				path.join(pathToArtifacts, 'serviceWorker.js')
 			).isFile()
 		).toBe(true);
 	});

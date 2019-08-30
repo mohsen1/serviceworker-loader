@@ -4,10 +4,22 @@ import MemoryFs from 'memory-fs';
 
 export const fs = new MemoryFs();
 export const pathToArtifacts = path.resolve(__dirname, 'artifacts');
+const defaultOptions = {
+	plugins: []
+};
 
-export default function compile(fixtureEntry, options = {}, writeToFs = false) {
+export default function compile(fixtureEntry, options = defaultOptions, writeToFs = false) {
 
+	const {
+		devMode,
+		plugins,
+		...loaderOptions
+	} = options;
 	const webpackCompiler = webpack({
+		...(devMode ? {
+			mode:    'development',
+			devtool: 'inline-source-map'
+		} : {}),
 		optimization: {
 			minimize: false
 		},
@@ -21,11 +33,12 @@ export default function compile(fixtureEntry, options = {}, writeToFs = false) {
 			rules: [{
 				test: /serviceWorker\.js$/,
 				use:  {
-					loader: path.resolve(__dirname, '../src/index.js'),
-					options
+					loader:  path.resolve(__dirname, '../src/index.js'),
+					options: loaderOptions
 				}
 			}]
-		}
+		},
+		plugins
 	});
 
 	if (!writeToFs) {
