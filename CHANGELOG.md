@@ -24,6 +24,16 @@ DO NOT TOUCH. SAVE IT ON TOP.
 
 -->
 
+## [3.1.0] - 2019-08-31
+### Added
+- `trigen-scripts` dev tool;
+- "Hot Module Replacement" section in docs.
+
+### Changed
+- `ServiceWorkerNoSupportError` ES5 compatible;
+- Dependencies update.
+
+
 ## [3.0.0] - 2019-02-03
 ### Added
 - Tests with Jest.
