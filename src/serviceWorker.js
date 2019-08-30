@@ -1,11 +1,17 @@
 
 export default function serviceWorker(publicPath, file) {
-	return `export class ServiceWorkerNoSupportError extends Error {
+	return `export var ServiceWorkerNoSupportError = (function() {
 
-	constructor() {
-		super('ServiceWorker is not supported.');
+	function ServiceWorkerNoSupportError() {
+		var err = Error.call(this, 'ServiceWorker is not supported.');
+		Object.setPrototypeOf(err, ServiceWorkerNoSupportError.prototype);
+		return err;
 	}
-}
+
+	ServiceWorkerNoSupportError.prototype = Object.create(Error.prototype);
+
+	return ServiceWorkerNoSupportError;
+})();
 
 export default function registerServiceWorkerIfSupported(options) {
 

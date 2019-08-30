@@ -33,15 +33,19 @@ node_modules
 # Optional REPL history
 .node_repl_history
 
-# OS X stuff
+# OS stuff
+._*
 .DS_Store
 
 # Some caches
-.eslintcache
+.*cache
 
 # Compiled dist
 lib
+package
+build
 
 # Test artifacts
 test/artifacts/*
 
+.env
