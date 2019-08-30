@@ -69,6 +69,10 @@ Defaults to `"/"`. Overrides default `publicPath`.
 
 Overrides output path for all ServiceWorkers.
 
+## Hot Module Replacement
+
+Webpack's HMR did not designed for ServiceWorkers, so need to disable HMR for ServiceWorkers. You can do it with [`hmr-filter-webpack-plugin` plugin](https://github.com/TrigenSoftware/hmr-filter-webpack-plugin#usage). 
+
 ## Credit
 
 This loader is based almost entirely on [worker-loader](https://github.com/webpack/worker-loader) by [@sokra](https://github.com/sokra).
