@@ -13,10 +13,12 @@ export default function serviceWorker(publicPath, file) {
 	return ServiceWorkerNoSupportError;
 })();
 
+export var scriptUrl = ${publicPath} + ${file};
+
 export default function registerServiceWorkerIfSupported(options) {
 
 	if ('serviceWorker' in navigator) {
-		return navigator.serviceWorker.register(${publicPath} + ${file}, options);
+		return navigator.serviceWorker.register(scriptUrl, options);
 	}
 
 	return Promise.reject(new ServiceWorkerNoSupportError());

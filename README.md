@@ -55,6 +55,24 @@ registerServiceWorker({ scope: '/' }).then((registration) => {
 });
 ```
 
+Example with [Workbox Window](https://developers.google.com/web/tools/workbox/modules/workbox-window):
+
+```js
+import {
+    Workbox
+} from 'workbox-window';
+import {
+    scriptUrl
+} from 'service-worker-loader!./sw';
+
+if ('serviceWorker' in navigator) {
+
+    const wb = new Workbox(scriptUrl);
+
+    wb.register();
+}
+```
+
 ### Options
 
 #### `filename`

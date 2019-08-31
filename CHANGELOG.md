@@ -24,6 +24,11 @@ DO NOT TOUCH. SAVE IT ON TOP.
 
 -->
 
+## [3.2.0] - 2019-08-31
+### Added
+- Workbox Window usage example;
+- `scriptUrl` named export.
+
 ## [3.1.0] - 2019-08-31
 ### Added
 - `trigen-scripts` dev tool;

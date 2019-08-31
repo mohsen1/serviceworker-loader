@@ -14,10 +14,12 @@ exports[`service-worker-loader should emit bundle and service worker 1`] = `
 	return ServiceWorkerNoSupportError;
 })();
 
+export var scriptUrl = \\"/\\" + \\"serviceWorker.js\\";
+
 export default function registerServiceWorkerIfSupported(options) {
 
 	if ('serviceWorker' in navigator) {
-		return navigator.serviceWorker.register(\\"/\\" + \\"serviceWorker.js\\", options);
+		return navigator.serviceWorker.register(scriptUrl, options);
 	}
 
 	return Promise.reject(new ServiceWorkerNoSupportError());

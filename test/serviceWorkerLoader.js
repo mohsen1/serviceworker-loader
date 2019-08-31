@@ -1,7 +1,10 @@
 /* eslint-env browser */
 import registerServiceWorker, {
-	ServiceWorkerNoSupportError
+	ServiceWorkerNoSupportError,
+	scriptUrl
 } from './serviceWorker';
+
+console.log('scriptUrl:', scriptUrl);
 
 registerServiceWorker({ scope: '/' }).then(() => {
 
