@@ -64,7 +64,7 @@
     "eslint-plugin-jest": "^22.2.2",
     "memory-fs": "^0.4.1",
     "rollup-plugin-eslint": "^5.0.0",
-    "rollup-plugin-json": "^3.1.0",
+    "rollup-plugin-json": "^4.0.0",
     "webpack": "^4.29.0"
   },
   "files": [
