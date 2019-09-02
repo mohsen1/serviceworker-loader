@@ -97,9 +97,9 @@ Add it to your `globals.d.ts`:
 
 ```ts
 declare module 'service-worker-loader!*' {
-    const register: import('service-worker-loader').ServiceWorkerRegister;
-    const scriptUrl: import('service-worker-loader').ScriptUrl;
-    const ServiceWorkerNoSupportError: import('service-worker-loader').ServiceWorkerNoSupportError;
+    const register: import('service-worker-loader/types').ServiceWorkerRegister;
+    const scriptUrl: import('service-worker-loader/types').ScriptUrl;
+    const ServiceWorkerNoSupportError: import('service-worker-loader/types').ServiceWorkerNoSupportError;
     export default register;
     export {
         scriptUrl,
