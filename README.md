@@ -89,7 +89,36 @@ Overrides output path for all ServiceWorkers.
 
 ## Hot Module Replacement
 
-Webpack's HMR did not designed for ServiceWorkers, so need to disable HMR for ServiceWorkers. You can do it with [`hmr-filter-webpack-plugin` plugin](https://github.com/TrigenSoftware/hmr-filter-webpack-plugin#usage). 
+Webpack's HMR did not designed for ServiceWorkers, so need to disable HMR for ServiceWorkers. You can do it with [`hmr-filter-webpack-plugin` plugin](https://github.com/TrigenSoftware/hmr-filter-webpack-plugin#usage).
+
+## Using with TypeScript
+
+Add it to your `globals.d.ts`:
+
+```ts
+declare module 'service-worker-loader!*' {
+    const register: import('service-worker-loader').ServiceWorkerRegister;
+    const scriptUrl: import('service-worker-loader').ScriptUrl;
+    const ServiceWorkerNoSupportError: import('service-worker-loader').ServiceWorkerNoSupportError;
+    export default register;
+    export {
+        scriptUrl,
+        ServiceWorkerNoSupportError
+    };
+}
+// or, for example
+declare module '*?sw' {
+    // ...
+}
+```
+
+Now you can import ServiceWorker:
+
+```ts
+import registerServiceWorker from 'service-worker-loader!./serviceWorker';
+// or
+import registerServiceWorker from './serviceWorker?sw';
+```
 
 ## Credit
 
