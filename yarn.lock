@@ -1184,12 +1184,12 @@
     "@trigen/scripts" "^2.7.0"
     size-limit "^2.0.0"
 
-"@trigen/scripts-preset-lib@2":
-  version "2.7.2"
-  resolved "https://registry.yarnpkg.com/@trigen/scripts-preset-lib/-/scripts-preset-lib-2.7.2.tgz#c6cbd67a5f5640de75f7964c169b6e61e938b1f4"
-  integrity sha512-VULYzw8JFb5RMwS/7AC+dmPIiIT5IWs6xzJUNIVGgPRSsbr7r82br20dY+awoxTSp8etxWlHAe/OHjl8bUgpLw==
+"@trigen/scripts-preset-lib@3":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@trigen/scripts-preset-lib/-/scripts-preset-lib-3.1.0.tgz#0f3f0124cacfcfaacb0b7ea882dadf31ac0ad204"
+  integrity sha512-5jy/KHYqmZJiWJ6ucAJKBD8NHZC+i2YUHNzK5MJj25zO60ECdtIDuCj+xReKPV9XlrtO/FkrbGMiZWikWsdPFw==
   dependencies:
-    "@trigen/scripts" "^2.7.0"
+    "@trigen/scripts" "^3.1.0"
     browserslist-config-trigen "^1.1.0"
     clean-publish "^1.1.0"
     coveralls "^3.0.0"
@@ -1200,6 +1200,18 @@
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/@trigen/scripts/-/scripts-2.7.0.tgz#7a36334f65a868f8a424c73c3a36e6bfa0964b67"
   integrity sha512-xvRY6StDwCplpPQK1JzKopnYEQnhxa6mxPJz5D+ut39SblwcZWGcFFDG5QbbBWhurq9Lb0bnKhSfLNbHmWnLpw==
+  dependencies:
+    "@babel/runtime" "^7.4.2"
+    chalk "^2.4.2"
+    core-js "3"
+    immutability-helper "^3.0.0"
+    rcfile "^1.0.3"
+    resolve-cwd "^3.0.0"
+
+"@trigen/scripts@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@trigen/scripts/-/scripts-3.1.0.tgz#d3919aa37c8c3b00a62052ad01a1d8ea8a6cccb4"
+  integrity sha512-1uxpNpQLozhhtypk3v1iwuYmk7MOOFLvU0I7pRaiRqfyIMrBgqygn3Ubc1GXEQ9wa8CYJkEbZ6Y1At7ZHF5SoA==
   dependencies:
     "@babel/runtime" "^7.4.2"
     chalk "^2.4.2"
