@@ -78,10 +78,11 @@ if ('serviceWorker' in navigator) {
 ### Loader exports
 
 ```js
-import registerServiceWorker, {
+export default registerServiceWorker;
+export {
     ServiceWorkerNoSupportError,
     scriptUrl
-} from 'service-worker-loader!./service-worker.js';
+};
 ```
 
 #### `registerServiceWorker(options: RegistrationOptions): Promise<ServiceWorkerRegistration>`
@@ -116,7 +117,7 @@ Overrides output path for all service workers.
 
 ## Hot Module Replacement
 
-Webpack's HMR did not designed for service workers, so need to disable HMR for them. You can do it with [`hmr-filter-webpack-plugin` plugin](https://github.com/TrigenSoftware/hmr-filter-webpack-plugin#usage).
+Webpack's HMR did not designed for service workers, so need to disable HMR for them. You can do it with [`hmr-filter-webpack-plugin`](https://github.com/TrigenSoftware/hmr-filter-webpack-plugin#usage).
 
 ## Using with TypeScript
 
