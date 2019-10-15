@@ -25,7 +25,7 @@
 [dependabot]: https://api.dependabot.com/badges/status?host=github&repo=mohsen1/service-worker-loader
 [dependabot-url]: https://dependabot.com/
 
-Modern ServiceWorker loader for [Webpack](https://webpack.js.org).
+Modern ServiceWorker loader for [Webpack](https://webpack.js.org): takes a file, emits it separately from the bundle, and exports a function to register the file as a service worker.
 
 ## Install
 
@@ -73,7 +73,21 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-### Options
+## API
+
+### Loader exports
+
+```js
+import registerServiceWorker, { scriptUrl, ServiceWorkerNoSupportError } from 'service-worker-loader!./service-worker.js';
+```
+
+* `registerServiceWorker(options: RegistrationOptions): Promise<ServiceWorkerRegistration>` registers the file passed through the loader as a service worker. The `options` argument is passed as the second argument to [`navigator.serviceWorker.register`](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register). The return value is a promise to [a `ServiceWorkerRegistration` object](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration).
+
+* `scriptUrl: string` is the URL of the emitted service worker file
+
+* `class ServiceWorkerNoSupportError extends Error` is the error type that `registerServiceWorker` rejects with when the browser doesn’t support service workers
+
+### Loader options
 
 #### `filename`
 
