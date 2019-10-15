@@ -40,7 +40,7 @@ yarn add -D service-worker-loader
 ```js
 import registerServiceWorker, {
     ServiceWorkerNoSupportError
-} from 'service-worker-loader!./sw.js';
+} from 'service-worker-loader!./sw';
 
 registerServiceWorker({ scope: '/' }).then((registration) => {
     console.log('Success!');
