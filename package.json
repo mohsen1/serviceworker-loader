@@ -1,7 +1,7 @@
 {
   "name": "service-worker-loader",
   "version": "3.3.0",
-  "description": "Modern ServiceWorker loader for Webpack.",
+  "description": "Modern service worker loader for Webpack.",
   "authors": [
     {
       "name": "Mark Dalgleish",
