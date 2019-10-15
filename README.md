@@ -39,7 +39,7 @@ yarn add -D service-worker-loader
 
 ```js
 import registerServiceWorker, {
-  ServiceWorkerNoSupportError
+    ServiceWorkerNoSupportError
 } from 'service-worker-loader!./sw.js';
 
 registerServiceWorker({ scope: '/' }).then((registration) => {
@@ -59,10 +59,10 @@ Example with [Workbox Window](https://developers.google.com/web/tools/workbox/mo
 
 ```js
 import {
-  Workbox
+    Workbox
 } from 'workbox-window';
 import {
-  scriptUrl
+    scriptUrl
 } from 'service-worker-loader!./sw';
 
 if ('serviceWorker' in navigator) {
