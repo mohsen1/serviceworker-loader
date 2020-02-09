@@ -24,7 +24,10 @@ DO NOT TOUCH. SAVE IT ON TOP.
 
 -->
 
-## [3.4.0] - 2020-02-09
+## [4.0.0] - 2020-02-09
+### Breaking
+- Requires `Node 10+`
+
 ### Added
 - `mapScriptUrl` optional argument to `registerServiceWorker`.
 
