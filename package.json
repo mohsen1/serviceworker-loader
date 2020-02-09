@@ -53,7 +53,7 @@
     "schema-utils": "^2.1.0"
   },
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^2.1.1",
+    "@size-limit/preset-small-lib": "^3.0.1",
     "@trigen/scripts": "^4.0.0",
     "@trigen/scripts-plugin-babel": "^4.0.0",
     "@trigen/scripts-plugin-eslint": "^4.0.0",
