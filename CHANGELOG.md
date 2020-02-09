@@ -24,6 +24,10 @@ DO NOT TOUCH. SAVE IT ON TOP.
 
 -->
 
+## [3.4.0] - 2020-02-09
+### Added
+- `mapScriptUrl` optional argument to `registerServiceWorker`.
+
 ## [3.2.0] - 2019-08-31
 ### Added
 - Workbox Window usage example;
