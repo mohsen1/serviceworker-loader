@@ -85,7 +85,9 @@ export {
 };
 ```
 
-#### `registerServiceWorker(options: RegistrationOptions): Promise<ServiceWorkerRegistration> | registerServiceWorker(mapScriptUrl: (scriptUrl: string) => string, options: RegistrationOptions): Promise<ServiceWorkerRegistration>`
+#### `registerServiceWorker(options: RegistrationOptions): Promise<ServiceWorkerRegistration>`
+
+#### `registerServiceWorker(mapScriptUrl: (scriptUrl: string) => string, options: RegistrationOptions): Promise<ServiceWorkerRegistration>`
 
 Registers the file passed through the loader as a service worker. The `options` argument is passed as the second argument to [`navigator.serviceWorker.register`](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register). The return value is a promise to [a `ServiceWorkerRegistration` object](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration).
 
