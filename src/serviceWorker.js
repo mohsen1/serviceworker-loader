@@ -15,10 +15,19 @@ export default function serviceWorker(publicPath, file) {
 
 export var scriptUrl = ${publicPath} + ${file};
 
-export default function registerServiceWorkerIfSupported(options) {
+export default function registerServiceWorkerIfSupported(mapScriptUrlOrOptions, maybeOptions) {
+
+	var targetScriptUrl = scriptUrl;
+	var options = maybeOptions;
+
+	if (typeof mapScriptUrlOrOptions === 'function') {
+		targetScriptUrl = mapScriptUrlOrOptions(targetScriptUrl);
+	} else {
+		options = mapScriptUrlOrOptions;
+	}
 
 	if ('serviceWorker' in navigator) {
-		return navigator.serviceWorker.register(scriptUrl, options);
+		return navigator.serviceWorker.register(targetScriptUrl, options);
 	}
 
 	return Promise.reject(new ServiceWorkerNoSupportError());
