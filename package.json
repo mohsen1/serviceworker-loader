@@ -63,7 +63,7 @@
     "@trigen/scripts-preset-lib": "^3.0.0",
     "eslint-plugin-jest": "^23.6.0",
     "memory-fs": "^0.5.0",
-    "rollup-plugin-eslint": "^5.0.0",
+    "rollup-plugin-eslint": "^7.0.0",
     "rollup-plugin-json": "^4.0.0",
     "webpack": "^4.29.0"
   },
