@@ -874,9 +874,9 @@
     source-map-support "^0.5.9"
 
 "@babel/runtime@^7.4.2", "@babel/runtime@^7.5.5":
-  version "7.6.3"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.6.3.tgz#935122c74c73d2240cafd32ddb5fc2a6cd35cf1f"
-  integrity sha512-kq6anf9JGjW8Nt5rYfEuGRaEAaH1mkv3Bbu6rYvLOpPh/RusSJXuKPEAoZ7L7gybZkchE8+NV5g9vKF4AGAtsA==
+  version "7.8.4"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.8.4.tgz#d79f5a2040f7caa24d53e563aad49cbc05581308"
+  integrity sha512-neAp3zt80trRVBI1x0azq6c57aNBqYZH8KhMm3TaB7wEI5Q4A2SHfBHE8w9gOhI/lrqxtEbXZgQIrHP+wvSGwQ==
   dependencies:
     regenerator-runtime "^0.13.2"
 
@@ -1198,7 +1198,7 @@
     husky "^3.0.3"
     lint-staged "^9.2.1"
 
-"@trigen/scripts@3", "@trigen/scripts@^3.2.0", "@trigen/scripts@^3.5.3":
+"@trigen/scripts@3", "@trigen/scripts@^3.5.3":
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/@trigen/scripts/-/scripts-3.5.3.tgz#038c55b00a1be0636948b2dc700fdb4022b2a9ea"
   integrity sha512-iF5NLUWAio1cuwCyIkYTSA5lLrNWabmmpFlUhGwbmyeIqiH2KiKIDGszTDKPKusI+hR7C4/Ub/94zeCIUkk2bA==
