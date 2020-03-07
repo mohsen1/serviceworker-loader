@@ -14,7 +14,7 @@ export type ScriptUrl = string;
 /**
  * Register ServiceWorker function type.
  */
-export type ServiceWorkerRegister = {
+export interface ServiceWorkerRegister {
 	(options?: RegistrationOptions): Promise<ServiceWorkerRegistration>;
 	(mapScriptUrl: (scriptUrl: string) => string, options?: RegistrationOptions): Promise<ServiceWorkerRegistration>;
-};
+}
