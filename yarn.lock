@@ -1275,16 +1275,16 @@
     webpack "^4.42.0"
     webpack-bundle-analyzer "^3.6.0"
 
-"@trigen/scripts-plugin-babel@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@trigen/scripts-plugin-babel/-/scripts-plugin-babel-4.0.0.tgz#be88dfe016c5a325339e8bbebcd074ea3c03e9ad"
-  integrity sha512-duyjzf/o2k9jFNvDBmNbv0X8H+cIFuN6j0neIi3chQaFTL0T5Ao/2A0gsqWNeU9aTWNYpDFy2zAF0YIgzjMAAg==
+"@trigen/scripts-plugin-babel@^5.3.0":
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/@trigen/scripts-plugin-babel/-/scripts-plugin-babel-5.3.0.tgz#1a8f4f9de191001ea54a09e39e26e1da59921208"
+  integrity sha512-6JAzzUVwd0uckJ6pkSy4dWcW02KeGOc0yo9ux1F/WOAHUOwJmKxH4qnunhX7unrEOs3MAMQupWk5XoV9jZCYBw==
   dependencies:
     "@babel/cli" "^7.2.3"
     "@babel/core" "^7.4.0"
     "@babel/node" "^7.0.0"
     "@babel/runtime" "^7.4.2"
-    "@trigen/scripts" "^4.0.0"
+    "@trigen/scripts" "^5.3.0"
     babel-preset-trigen "^2.2.1"
 
 "@trigen/scripts-plugin-eslint@^4.0.0":
@@ -1347,6 +1347,18 @@
   dependencies:
     "@babel/runtime" "^7.4.2"
     chalk "^3.0.0"
+    core-js "3"
+    immutability-helper "^3.0.0"
+    rcfile "^1.0.3"
+    resolve-cwd "^3.0.0"
+
+"@trigen/scripts@^5.3.0":
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/@trigen/scripts/-/scripts-5.3.0.tgz#ac47c884c238145a80cbcb6fb8f2945770351a2f"
+  integrity sha512-Yy2gLrwM33KxmUUEscYHH5T/KJ4m0HhFpf3dTUk6tcadwxAuXqLrRBdQiU65twF4WRmMgVl3y6akZVsa+D6hJQ==
+  dependencies:
+    "@babel/runtime" "^7.4.2"
+    chalk "^4.0.0"
     core-js "3"
     immutability-helper "^3.0.0"
     rcfile "^1.0.3"
@@ -2663,6 +2675,14 @@ chalk@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-3.0.0.tgz#3f73c2bf526591f574cc492c51e2456349f844e4"
   integrity sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg==
+  dependencies:
+    ansi-styles "^4.1.0"
+    supports-color "^7.1.0"
+
+chalk@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.0.0.tgz#6e98081ed2d17faab615eb52ac66ec1fe6209e72"
+  integrity sha512-N9oWFcegS0sFr9oh1oz2d7Npos6vNoWW9HvtCg5N1KRFpUhaAhvTv5Y58g880fZaEYSNm3qDz8SU1UrGvp+n7A==
   dependencies:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
