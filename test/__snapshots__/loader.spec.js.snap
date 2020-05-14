@@ -14,7 +14,7 @@ exports[`service-worker-loader should emit bundle and service worker 1`] = `
 	return ServiceWorkerNoSupportError;
 })();
 
-export var scriptUrl = \\"/\\" + \\"serviceWorker.js\\";
+export var scriptUrl = __webpack_public_path__ + \\"serviceWorker.js\\";
 
 export default function registerServiceWorkerIfSupported(mapScriptUrlOrOptions, maybeOptions) {
 
