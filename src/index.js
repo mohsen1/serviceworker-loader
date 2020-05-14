@@ -39,7 +39,6 @@ export function pitch(request) {
 		context: options.context || this.rootContext,
 		regExp:  options.regExp
 	});
-	const publicPath = options.publicPath || '/';
 	const outputOptions = {
 		filename,
 		chunkFilename:      `[id].${filename}`,
@@ -81,7 +80,7 @@ export function pitch(request) {
 
 			const file = entries[0].files[0];
 			const code = getServiceWorker(
-				JSON.stringify(publicPath) || '__webpack_public_path__',
+				JSON.stringify(options.publicPath) || '__webpack_public_path__',
 				JSON.stringify(file)
 			);
 
