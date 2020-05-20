@@ -47,8 +47,7 @@
     "webpack": "^3.0.0 || ^4.0.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.5.5",
-    "core-js": "3",
+    "@babel/runtime-corejs3": "^7.9.6",
     "loader-utils": "^2.0.0",
     "schema-utils": "^2.1.0"
   },
