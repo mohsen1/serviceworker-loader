@@ -59,7 +59,7 @@
     "@trigen/scripts-plugin-babel": "^4.0.0",
     "@trigen/scripts-plugin-eslint": "^4.0.0",
     "@trigen/scripts-plugin-jest": "^4.0.0",
-    "@trigen/scripts-plugin-rollup": "^4.0.0",
+    "@trigen/scripts-plugin-rollup": "^5.5.0",
     "@trigen/scripts-plugin-size-limit": "^4.0.0",
     "@trigen/scripts-preset-lib": "^5.5.0",
     "eslint-plugin-jest": "^23.6.0",
