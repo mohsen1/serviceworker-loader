@@ -24,6 +24,10 @@ DO NOT TOUCH. SAVE IT ON TOP.
 
 -->
 
+## [4.0.2] - 2020-05-20
+### Fixed
+- [#143](https://github.com/mohsen1/service-worker-loader/issues/143)
+
 ## [4.0.0] - 2020-02-09
 ### Breaking
 - Requires `Node 10+`

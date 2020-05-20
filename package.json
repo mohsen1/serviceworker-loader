@@ -1,6 +1,6 @@
 {
   "name": "service-worker-loader",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Modern service worker loader for Webpack.",
   "authors": [
     {
