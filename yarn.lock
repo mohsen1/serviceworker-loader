@@ -1442,17 +1442,17 @@
     eslint "^7.0.0"
     eslint-config-trigen "^3.2.3"
 
-"@trigen/scripts-plugin-jest@^5.5.0":
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/@trigen/scripts-plugin-jest/-/scripts-plugin-jest-5.5.0.tgz#dfe3993ba94a909c3531fd572f486188bba3495a"
-  integrity sha512-DdI/3O/X9H9huoNlHkzYllVacXxsaxiDdSKID4lJvLBuvjsK0Y7ihsVR0+Ka+f25nY6bXLTu6zFR+B1+Xdo2sw==
+"@trigen/scripts-plugin-jest@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@trigen/scripts-plugin-jest/-/scripts-plugin-jest-6.0.0.tgz#53ed8cfafa9def18409ed193543ecef8db199cb6"
+  integrity sha512-xKZEnnkZwoD078+vXADsRcwewQgp4PpU0u4EjxRW3UKEE2MIGmexRyxuuAzrEJNn8dkAWc6DedCzRjBi2Sr6tA==
   dependencies:
     "@babel/runtime-corejs3" "^7.9.6"
-    "@trigen/scripts" "^5.5.0"
+    "@trigen/scripts" "^6.0.0"
     "@types/jest" "^25.1.3"
     archiver "^4.0.1"
     babel-jest "^26.0.1"
-    babel-preset-trigen "^4.0.0"
+    babel-preset-trigen "^4.1.0"
     form-data "^3.0.0"
     jest "^25.1.0"
     nodemailer "^6.3.0"
@@ -1505,6 +1505,17 @@
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/@trigen/scripts/-/scripts-5.5.0.tgz#4f45225927fdf373182efcb05d1aa01004b6b75c"
   integrity sha512-HOROslch9W6G+bjD/jRsQLOI4Ns0A0mP/vlwmL+XKwkLzjk/bgyfbtm8eL3OjaUhncnqPdhdGMx6sSEWiKjZWQ==
+  dependencies:
+    "@babel/runtime-corejs3" "^7.9.6"
+    chalk "^4.0.0"
+    immutability-helper "^3.0.0"
+    rcfile "^1.0.3"
+    resolve-cwd "^3.0.0"
+
+"@trigen/scripts@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@trigen/scripts/-/scripts-6.0.0.tgz#99aee9b8a8f7b034b28ac59fe14c7cc06e77b7e1"
+  integrity sha512-nhqXtM8xU3EeG1BCyWNjWhcjL78+G7/8MZvUAri7d8nOu39kg3HnSkF9vLrtolXj9yhlzLOWoTOxW7RWoIGZEw==
   dependencies:
     "@babel/runtime-corejs3" "^7.9.6"
     chalk "^4.0.0"
@@ -2424,10 +2435,10 @@ babel-preset-jest@^26.0.0:
     babel-plugin-jest-hoist "^26.0.0"
     babel-preset-current-node-syntax "^0.1.2"
 
-babel-preset-trigen@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/babel-preset-trigen/-/babel-preset-trigen-4.0.0.tgz#745452c6c4531238121eee4ad38a5be3b05d30de"
-  integrity sha512-aI1k3GMG+iY6iBzX10sfb3VMse6/3AbjC8S4yDocTbDn7XKw/nBeV8xZX4t7nc+u0fKQpx6Uq+TVtZeoBOH8rg==
+babel-preset-trigen@^4.0.0, babel-preset-trigen@^4.1.0:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/babel-preset-trigen/-/babel-preset-trigen-4.2.1.tgz#d58073b66c2373de54f703698fec4358a39a37da"
+  integrity sha512-s4qJd3AmIwx96t8DpKVAl18ze3ay6smbMLtOUqzQaXeLy7VSik6LEZWXw67kM9rqQxt5OC+6dyyW3HVrnj78dw==
   dependencies:
     "@babel/helper-plugin-utils" "^7.8.3"
     "@babel/plugin-proposal-async-generator-functions" "^7.8.3"
