@@ -1434,13 +1434,13 @@
     "@trigen/scripts" "^6.0.0"
     babel-preset-trigen "^4.1.0"
 
-"@trigen/scripts-plugin-eslint@^5.5.0":
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/@trigen/scripts-plugin-eslint/-/scripts-plugin-eslint-5.5.0.tgz#ec0940e2e08491e52a1d02373cce1b6b713e510f"
-  integrity sha512-iVLGvedPc3leyMGqGnQYTU4N26b8WnEFNLHs9MGZHntnzkqWR2mmRuYTpiLxP8MKJ//6BXEFHgCMEODUf4AuBA==
+"@trigen/scripts-plugin-eslint@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@trigen/scripts-plugin-eslint/-/scripts-plugin-eslint-6.0.0.tgz#ef3e79f26725eb042482ad8364be0b679cd85688"
+  integrity sha512-B3vkM/VlPSOdIn1FlCbHj37hFRFW5jc6hZ6Ar46s5vreDLOQqAE0OIKSfuPHyr7O7uphptbjFHgX2M7ZxicySQ==
   dependencies:
     "@babel/runtime-corejs3" "^7.9.6"
-    "@trigen/scripts" "^5.5.0"
+    "@trigen/scripts" "^6.0.0"
     eslint "^7.0.0"
     eslint-config-trigen "^3.2.3"
 
