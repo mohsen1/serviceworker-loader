@@ -195,7 +195,7 @@
   dependencies:
     "@babel/types" "^7.8.3"
 
-"@babel/helper-module-imports@^7.0.0", "@babel/helper-module-imports@^7.8.3":
+"@babel/helper-module-imports@^7.7.4", "@babel/helper-module-imports@^7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/helper-module-imports/-/helper-module-imports-7.8.3.tgz#7fe39589b39c016331b6b8c3f441e8f0b1419498"
   integrity sha512-R0Bx3jippsbAEtzkpZ/6FIiuzOURPcMjHp+Z6xPe6DtApDJx+w7UYyOLanZqO8+wKR9G10s/FmHXvxaMd9s6Kg==
@@ -1349,13 +1349,23 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@rollup/plugin-commonjs@^11.0.1":
-  version "11.0.2"
-  resolved "https://registry.yarnpkg.com/@rollup/plugin-commonjs/-/plugin-commonjs-11.0.2.tgz#837cc6950752327cb90177b608f0928a4e60b582"
-  integrity sha512-MPYGZr0qdbV5zZj8/2AuomVpnRVXRU5XKXb3HVniwRoRCreGlf5kOE081isNWeiLIi6IYkwTX9zE0/c7V8g81g==
+"@rollup/plugin-babel@^5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@rollup/plugin-babel/-/plugin-babel-5.0.2.tgz#d9351b9545b0c586a193fc99830d4b1a25317ed5"
+  integrity sha512-GiL7jL+FGppzQ1Sn4y2ER4UYXlgXFFEt+sHm4WJEzQwI76Yf9oy2QDqIvcon6xApZWlik3L8fezRGC6Mj2vRXg==
   dependencies:
-    "@rollup/pluginutils" "^3.0.0"
+    "@babel/helper-module-imports" "^7.7.4"
+    "@rollup/pluginutils" "^3.0.8"
+
+"@rollup/plugin-commonjs@^12.0.0":
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/@rollup/plugin-commonjs/-/plugin-commonjs-12.0.0.tgz#e2f308ae6057499e0f413f878fff7c3a0fdc02a1"
+  integrity sha512-8+mDQt1QUmN+4Y9D3yCG8AJNewuTSLYPJVzKKUZ+lGeQrI+bV12Tc5HCyt2WdlnG6ihIL/DPbKRJlB40DX40mw==
+  dependencies:
+    "@rollup/pluginutils" "^3.0.8"
+    commondir "^1.0.1"
     estree-walker "^1.0.1"
+    glob "^7.1.2"
     is-reference "^1.1.2"
     magic-string "^0.25.2"
     resolve "^1.11.0"
@@ -1367,7 +1377,7 @@
   dependencies:
     "@rollup/pluginutils" "^3.0.8"
 
-"@rollup/pluginutils@^3.0.0", "@rollup/pluginutils@^3.0.8":
+"@rollup/pluginutils@^3.0.8":
   version "3.0.10"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-3.0.10.tgz#a659b9025920378494cd8f8c59fbf9b3a50d5f12"
   integrity sha512-d44M7t+PjmMrASHbhgpSbVgtL6EFyX7J4mYxwQ/c5eoaE6N2VgCgEcWVzNnwycIloti+/MpwFr8qfw+nRw00sw==
@@ -1459,16 +1469,16 @@
     jest "^25.1.0"
     nodemailer "^6.3.0"
 
-"@trigen/scripts-plugin-rollup@^5.5.0":
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/@trigen/scripts-plugin-rollup/-/scripts-plugin-rollup-5.5.0.tgz#432407eb226556c34116fbcb7fa48a77273e8ff1"
-  integrity sha512-N5krgDG5amBJ7NNohUC5oyFujWBbEwZX+TKdWCJYhSNgrb8s/RQ/6+pF7YsFfftMvSqhit/o8ZZ4PfmiFcygUA==
+"@trigen/scripts-plugin-rollup@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@trigen/scripts-plugin-rollup/-/scripts-plugin-rollup-6.0.0.tgz#0356da8ade8d0ee3b0ba59acfd54d9c8a86fecc0"
+  integrity sha512-4RyUdGg52G/4Myu/2V323xE9uqoofyFvv/PsSSxZLF9uppHakVNRKta6ZQWuzycVsmi5k4xatZCOHdq1KQG2Ig==
   dependencies:
     "@babel/runtime-corejs3" "^7.9.6"
-    "@rollup/plugin-commonjs" "^11.0.1"
+    "@rollup/plugin-babel" "^5.0.2"
+    "@rollup/plugin-commonjs" "^12.0.0"
     builtin-modules "*"
     rollup "^2.6.1"
-    rollup-plugin-babel "^4.0.3"
 
 "@trigen/scripts-plugin-size-limit@^6.0.0":
   version "6.0.0"
@@ -1491,17 +1501,6 @@
     coveralls "^3.0.0"
     husky "^4.0.9"
     lint-staged "^10.0.0"
-
-"@trigen/scripts@^5.5.0":
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/@trigen/scripts/-/scripts-5.5.0.tgz#4f45225927fdf373182efcb05d1aa01004b6b75c"
-  integrity sha512-HOROslch9W6G+bjD/jRsQLOI4Ns0A0mP/vlwmL+XKwkLzjk/bgyfbtm8eL3OjaUhncnqPdhdGMx6sSEWiKjZWQ==
-  dependencies:
-    "@babel/runtime-corejs3" "^7.9.6"
-    chalk "^4.0.0"
-    immutability-helper "^3.0.0"
-    rcfile "^1.0.3"
-    resolve-cwd "^3.0.0"
 
 "@trigen/scripts@^6.0.0":
   version "6.0.0"
@@ -8116,14 +8115,6 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
-rollup-plugin-babel@^4.0.3:
-  version "4.3.3"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-babel/-/rollup-plugin-babel-4.3.3.tgz#7eb5ac16d9b5831c3fd5d97e8df77ba25c72a2aa"
-  integrity sha512-tKzWOCmIJD/6aKNz0H1GMM+lW1q9KyFubbWzGiOG540zxPPifnEAHTZwjo0g991Y+DyOZcLqBgqOdqazYE5fkw==
-  dependencies:
-    "@babel/helper-module-imports" "^7.0.0"
-    rollup-pluginutils "^2.8.1"
-
 rollup-plugin-eslint@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/rollup-plugin-eslint/-/rollup-plugin-eslint-7.0.0.tgz#a6dbcbc14699a7a02155697c0c3dfa26cca59a9b"
@@ -8132,7 +8123,7 @@ rollup-plugin-eslint@^7.0.0:
     eslint "^6.0.0"
     rollup-pluginutils "^2.7.1"
 
-rollup-pluginutils@^2.7.1, rollup-pluginutils@^2.8.1:
+rollup-pluginutils@^2.7.1:
   version "2.8.2"
   resolved "https://registry.yarnpkg.com/rollup-pluginutils/-/rollup-pluginutils-2.8.2.tgz#72f2af0748b592364dbd3389e600e5a9444a351e"
   integrity sha512-EEp9NhnUkwY8aif6bxgovPHMoMoNr2FulJziTndpt5H9RdwC47GSGuII9XxpSdzVGM0GWrNPHV6ie1LTNJPaLQ==
