@@ -4,7 +4,7 @@ import {
 import { eslint } from 'rollup-plugin-eslint';
 import json from '@rollup/plugin-json';
 import commonjs from '@rollup/plugin-commonjs';
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 import pkg from './package.json';
 
 const plugins = [
@@ -17,7 +17,8 @@ const plugins = [
 	}),
 	commonjs(),
 	babel({
-		runtimeHelpers: true
+		babelHelpers:       'runtime',
+		skipPreflightCheck: true
 	})
 ];
 
