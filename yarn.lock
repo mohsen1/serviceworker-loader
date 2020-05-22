@@ -1445,16 +1445,16 @@
     eslint-config-trigen "^3.2.3"
 
 "@trigen/scripts-plugin-jest@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@trigen/scripts-plugin-jest/-/scripts-plugin-jest-6.0.0.tgz#53ed8cfafa9def18409ed193543ecef8db199cb6"
-  integrity sha512-xKZEnnkZwoD078+vXADsRcwewQgp4PpU0u4EjxRW3UKEE2MIGmexRyxuuAzrEJNn8dkAWc6DedCzRjBi2Sr6tA==
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/@trigen/scripts-plugin-jest/-/scripts-plugin-jest-6.1.1.tgz#4aa313b03fd43a345f48cc5a1462eb243c486e3b"
+  integrity sha512-suS4OdqHYBqE/ttjaZX30KGlUYheWfprDsrgDWwTQcr18Izk1vGJS14QZ/SF+Tu4tn1Hpf6U9edDvvCn6+d32w==
   dependencies:
     "@babel/runtime-corejs3" "^7.9.6"
     "@trigen/scripts" "^6.0.0"
     "@types/jest" "^25.1.3"
     archiver "^4.0.1"
     babel-jest "^26.0.1"
-    babel-preset-trigen "^4.1.0"
+    babel-preset-trigen "^4.2.3"
     form-data "^3.0.0"
     jest "^25.1.0"
     nodemailer "^6.3.0"
@@ -2275,10 +2275,10 @@ babel-preset-jest@^26.0.0:
     babel-plugin-jest-hoist "^26.0.0"
     babel-preset-current-node-syntax "^0.1.2"
 
-babel-preset-trigen@^4.1.0:
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/babel-preset-trigen/-/babel-preset-trigen-4.2.1.tgz#d58073b66c2373de54f703698fec4358a39a37da"
-  integrity sha512-s4qJd3AmIwx96t8DpKVAl18ze3ay6smbMLtOUqzQaXeLy7VSik6LEZWXw67kM9rqQxt5OC+6dyyW3HVrnj78dw==
+babel-preset-trigen@^4.1.0, babel-preset-trigen@^4.2.3:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/babel-preset-trigen/-/babel-preset-trigen-4.2.3.tgz#49f686696f95660c9c89bd2880fbd8624bcbde7b"
+  integrity sha512-OKoY0upVpAyO99eBduYvGgxG8mV+c1ZE9gfvfkYiKu2omWogVTyOwa4HXTY9f3uOzs3rqKAjhhn+ftg8OuwlSQ==
   dependencies:
     "@babel/helper-plugin-utils" "^7.8.3"
     "@babel/plugin-proposal-async-generator-functions" "^7.8.3"
