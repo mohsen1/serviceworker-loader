@@ -1433,16 +1433,16 @@
     webpack-bundle-analyzer "^3.7.0"
 
 "@trigen/scripts-plugin-babel@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@trigen/scripts-plugin-babel/-/scripts-plugin-babel-6.0.0.tgz#efaad77fdd5a0d7c9b199871f9dc5577509f8068"
-  integrity sha512-2+gwPSemzOcTxURu3RwUYcYi+NWMVmzw1zwD4cYk0+/c+X7DMOLp5SNYNRIHl71spRCmLk2gIoXV4LrKiRcZdQ==
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/@trigen/scripts-plugin-babel/-/scripts-plugin-babel-6.1.1.tgz#cd9e2887478fed378b0c37b106dc870c0991487f"
+  integrity sha512-3s5FHJKXGtUls3TNCK/UJUwG7CTvvbjJXrbYUhmmYiJZLugGcf1A5JnqcgYSORQ0Pr8IwiatfeUwMVznjquz1g==
   dependencies:
     "@babel/cli" "^7.2.3"
     "@babel/core" "^7.4.0"
     "@babel/node" "^7.0.0"
     "@babel/runtime-corejs3" "^7.9.6"
     "@trigen/scripts" "^6.0.0"
-    babel-preset-trigen "^4.1.0"
+    babel-preset-trigen "^4.2.3"
 
 "@trigen/scripts-plugin-eslint@^6.0.0":
   version "6.0.0"
@@ -2274,7 +2274,7 @@ babel-preset-jest@^26.0.0:
     babel-plugin-jest-hoist "^26.0.0"
     babel-preset-current-node-syntax "^0.1.2"
 
-babel-preset-trigen@^4.1.0, babel-preset-trigen@^4.2.3:
+babel-preset-trigen@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/babel-preset-trigen/-/babel-preset-trigen-4.2.3.tgz#49f686696f95660c9c89bd2880fbd8624bcbde7b"
   integrity sha512-OKoY0upVpAyO99eBduYvGgxG8mV+c1ZE9gfvfkYiKu2omWogVTyOwa4HXTY9f3uOzs3rqKAjhhn+ftg8OuwlSQ==
