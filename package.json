@@ -65,7 +65,7 @@
     "memory-fs": "^0.5.0",
     "rollup-plugin-eslint": "^7.0.0",
     "size-limit": "^4.0.1",
-    "webpack": "^4.29.0"
+    "webpack": "^5.27.1"
   },
   "files": [
     "lib",
